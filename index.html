@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Demo</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Demo project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="grid1.css">
+    <style>
+    body {
+        font-family: Arial;
+    }
+    
+    p {
+        color: #333;
+        margin: 20px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-m-12">
+                <h2 style='color:white; text-align:center;margin:30px;font-family: Arial;font-size: 32px;'>Css Grid by Cosmin Serboteiu</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1 col-m-2">
+            </div>
+            <div class="col-1 col-m-2">
+            </div>
+            <div class="col-1 col-m-2">
+            </div>
+            <div class="col-1 col-m-2">
+            </div>
+            <div class="col-1 col-m-2">
+            </div>
+            <div class="col-1 col-m-2 last">
+            </div>
+            <div class="col-1 col-m-2 first">
+            </div>
+            <div class="col-1 col-m-2">
+            </div>
+            <div class="col-1 col-m-2">
+            </div>
+            <div class="col-1 col-m-2">
+            </div>
+            <div class="col-1 col-m-2">
+            </div>
+            <div class="col-1 col-m-2">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2 col-m-4">
+            </div>
+            <div class="col-2 col-m-4 ">
+            </div>
+            <div class="col-2 col-m-4 last">
+            </div>
+            <div class="col-2 col-m-4 first">
+            </div>
+            <div class="col-2 col-m-4">
+            </div>
+            <div class="col-2 col-m-4">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 col-m-4">
+            </div>
+            <div class="col-1 col-m-4 ">
+            </div>
+            <div class="col-2 col-m-4 last">
+            </div>
+            <div class="col-3 col-m-4 first">
+            </div>
+            <div class="col-1 col-m-4">
+            </div>
+            <div class="col-2 col-m-4">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-m-12" style='background: none; margin-top: 30px'>
+                <h2> Css Grid v1.0</h2>
+                <p>This is a simple Css grid built with Less. It has 12 columns and two functional layouts based on the size of the screen. The large version can be used by adding the classes col-1 to col-12, col-1 beeing the smallest, taking 1/12 of the row and col-12 one taking the full width of the row. </p>
+                <p>The other view, for the smaller screens, can be used by adding col-m-1 to col-m-12 classes. It can be added in adition to the col-1/col-12. For this to work well, you need to specify manually which will be the last element on the row after resiszing. So if we have 12 col-1 and on a smaller screen they are col-m-2s the sixth will be the last one on that row, and the 7th will be the first one on the second row. So please specify this by adding the 'last' class and the 'first' class to your divs.</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript"></script>
+
+</html>

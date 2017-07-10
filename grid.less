@@ -1,0 +1,256 @@
+/*Reset*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+// grid
+
+@desktop:   ~"only screen and (min-width: 960px) ";
+@tablet:    ~"only screen and (min-width: 720px) and (max-width: 959px)";
+@columns: 12;
+@gutter: 1%;
+
+@media @desktop {
+    
+    .container {
+      width:960px;
+      margin: 0 auto;
+    }
+
+    .row {
+    padding: 0 @gutter;
+    *zoom: 1;
+    &:after,
+    &:before{
+        width: 100%;
+        content:' ';
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+    &:first-child{
+        margin: 0 0;
+    }
+    & > [class*='col-']:first-child {
+        margin-left: 0;
+    }
+    & > [class*='col-']:last-child {
+        margin-right: 0;
+    }
+    & > [class*='col-'] {
+        margin: 0 @gutter/2;
+    }
+
+    [class*='col-'] {
+        float:left;
+        min-height: 100px;
+        background: #ccc;
+        margin-bottom: 10px;
+    }
+    
+  
+    .loop(@i) when (@i < 13) {
+        .col-@{i} {
+            width: (100% - ((@columns/@i)-1)*@gutter)/(@columns/@i);  
+        }
+        .loop(@i+1);
+    }
+    .loop(1)
+    }
+  
+}
+
+@media @tablet {
+     .container {
+      width:720px;
+      margin: 0 auto;
+    }
+
+    .row {
+    padding: 0 @gutter;
+    *zoom: 1;
+    &:after,
+    &:before{
+        width: 100%;
+        content:' ';
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+    &:first-child{
+        margin: 0 0;
+    }
+    & > [class*='col-']:first-child {
+        margin-left: 0;
+    }
+
+    & > [class*='col-']:last-child {
+        margin-right: 0;
+    }
+    & > [class*='col-'] {
+        margin: 0 @gutter/2;
+    }
+    
+    .last {
+        margin-right: 0;
+    }
+
+    .first {
+        margin-left: 0;
+    }
+
+    [class*='col-m'] {
+        float:left;
+        min-height: 50px;
+        background: #ccc;
+        margin-bottom: 10px;
+    }
+
+    .loop(@i) when (@i < 13) {
+        .col-m-@{i} {
+            width: (100% - ((@columns/@i)-1)*@gutter)/(@columns/@i);  
+        }
+        .loop(@i+1);
+
+    }
+    .loop(1)
+    }
+    
+}
+
+
+
+
+
